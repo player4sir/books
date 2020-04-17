@@ -1,0 +1,9 @@
+{% load i18n %}
+
+{% autoescape off %}
+
+ {% blocktrans %}
+  请确认你的电子邮箱地址,thank you !
+ {% endblocktrans %}
+
+{% endautoescape %}
