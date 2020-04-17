@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+{% block title %}
+loggout
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <h1>退出登录</h1>
+    <p>你确定要退出登录吗? ?</p>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form|crispy}}
+        <button class="btn btn-danger" type="submit">退出</button>
+    </form>
+</div>
+{% endblock content %}
