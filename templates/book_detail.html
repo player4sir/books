@@ -6,7 +6,8 @@
 
 {% block content %}
 
-<div>
+<div> 
+    <img src="{{book.cover.url}}" alt="{{book.title}}">  
     <h2>
         {{book.title}}
     </h2>
@@ -16,7 +17,7 @@
         <h3>评论</h3>
         <ul>
             {% for review in book.reviews.all %}
-              <li>{{review.review}}({{review.author}})</li>
+            <li>{{review.review}}({{review.author}})</li>
             {% endfor %}
         </ul>
     </div>
