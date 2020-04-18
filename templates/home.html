@@ -11,7 +11,7 @@ home
 <p class="text-right">你好，{{user.username}} !</p>
     
 {% endif %} 
-<div>
-    <img src="{% static "images/cpe.jpg" %}" alt="..." class="rounded float-left">
-</div>
+ <form action="{% url 'search_result' %}" method="get">
+     <input name="q" placeholder="搜索" aria-label="Search" type="text">
+ </form>
 {% endblock content %}

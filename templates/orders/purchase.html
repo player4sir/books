@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}
+orders
+{% endblock title %}
+{% block content %}
+<h1>orders page</h1>
+<p>buy for $39.00</p>
+<form action="" method="post">
+    {% csrf_token %}
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="{{stripe_key}}"
+        data-description="all books" data-amount="3900" data-locale="auto"></script>
+</form>
+
+{% endblock content %}
